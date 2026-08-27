@@ -1,0 +1,17 @@
+button {
+    width: 10vw;
+    height: 10vw;
+    background-color: rgb(253, 146, 255);
+}
+
+table {
+    width: 98vw;
+    height: 98vh;
+    border: 5px solid black;
+}
+
+tr,
+td {
+    border: 5px solid black;
+
+}
