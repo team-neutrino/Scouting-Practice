@@ -1,17 +1,28 @@
-button {
+#button1 {
     width: 10vw;
     height: 10vw;
-    background-color: rgb(253, 146, 255);
+    background-color: rgb(237, 156, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    left: 0px;
 }
 
-table {
-    width: 98vw;
-    height: 98vh;
-    border: 5px solid black;
+#button2 {
+    width: 20vw;
+    height: 20vw;
+    background-color: rgb(135, 52, 154);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    right: 0px;
 }
 
-tr,
-td {
-    border: 5px solid black;
-
+div {
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    translate: -50% -50%;
+    border: 1px solid black;
+    height: 50vh;
+    width: 50vw;
+    text-align: center;
 }
