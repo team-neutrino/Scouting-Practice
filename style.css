@@ -5,11 +5,29 @@ button {
 }
 
 table {
-    width: 98vw;
-    height: 97vh;
+    width: 50vw;
+    height: 50vh;
+    border: 1px solid black;
+
+}
+
+div {
+    position: absolute;
+    translate: -50% -50%;
+    left: 50vw;
+    top: 50vh;
+}
+
+tr,
+td {
     border: 1px solid black;
 }
 
-tr,td {
-    border: 1px solid black;
+#B1 {
+    left: 50vw;
+    top: 50vw;
+}
+
+#B2 {
+    position: absolute;
 }
