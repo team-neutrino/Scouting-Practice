@@ -1,28 +1,89 @@
-#button1 {
-    width: 10vw;
+table {
+    border: solid 2px black;
+    width: 98vw;
     height: 10vw;
-    background-color: rgb(237, 156, 255);
+}
+
+th {
+    border: solid 2px black;
+    height: 20vh;
+    font-size: xx-large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    position: absolute;
-    left: 0px;
+    color: blue;
+}
+
+tr {
+    border: solid 2px black;
+    height: 20vh;
+}
+
+td {
+    border: solid 2px black;
+    text-align: center;
+}
+
+textarea {
+    resize: none;
+}
+
+#button1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: green;
+    border-color: green;
+}
+
+#button3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: orange;
+    border-color: orange;
 }
 
 #button2 {
-    width: 20vw;
-    height: 20vw;
-    background-color: rgb(135, 52, 154);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    position: absolute;
-    right: 0px;
+    font-size: large;
+    background-color: rgb(151, 255, 151);
+    border-color: rgb(151, 255, 151);
 }
 
-div {
-    position: absolute;
-    left: 50vw;
-    top: 50vh;
-    translate: -50% -50%;
-    border: 1px solid black;
-    height: 50vh;
-    width: 50vw;
-    text-align: center;
+#button4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: rgb(255, 206, 116);
+    border-color: rgb(255, 206, 116);
+}
+
+#backbutton {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: white;
+    border-color: white;
+}
+
+#nextbutton {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: white;
+    border-color: white;
+}
+
+#button1td {
+    background-color: green;
+}
+
+#textareatd {
+    background-color: gray;
+}
+
+#button3td {
+    background-color: orange;
+}
+
+#button2td {
+    background-color: rgb(151, 255, 151);
+}
+
+#button4td {
+    background-color: rgb(255, 206, 116);
 }
