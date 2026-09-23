@@ -1,8 +1,19 @@
 button {
-    width: 10vw;
+    width: 25vw;
     height: 10vh;
-    background-color: rgb(22, 222, 42);
 }
+
+table {
+    width:90vw;
+    height: 90vh;
+
+}
+
+td {
+    height: 30vh;
+    width: 10vw;
+    border: 1pxsolid black;button }
+    
 
 table {
     width: 98vw;
@@ -21,49 +32,9 @@ td {
 textarea {
     width: 20vw;
 }
-
-#button3 {
-    background-color: rgb(202, 22, 42);
-    font-size: 30px;
-    font-style: italic;
-    font-family:'Courier New', Courier, monospace;
-    color: aqua;
+#rah {
+    height: 90vh;
 }
-
-.yellowButtons {
-    background-color: rgb(202, 222, 42);
-}
-
-#coolButton {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}
-
-#coolButton2 {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
-
-#coolButton3 {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-}
-
-#coolButton4 {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-}
-
-div {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); 
-    border: 1px solid black;
-    width: 30vw;
-    height: 30vh;
+.rah {
+    height: 10vh;
 }
