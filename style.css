@@ -2,39 +2,3 @@ button {
     width: 25vw;
     height: 10vh;
 }
-
-table {
-    width:90vw;
-    height: 90vh;
-
-}
-
-td {
-    height: 30vh;
-    width: 10vw;
-    border: 1pxsolid black;button }
-    
-
-table {
-    width: 98vw;
-    height: 97vh;
-    border: 1px solid black;
-}
-
-tr,td {
-    border: 1px solid black;
-}
-
-td {
-    text-align: center;
-}
-
-textarea {
-    width: 20vw;
-}
-#rah {
-    height: 90vh;
-}
-.rah {
-    height: 10vh;
-}
