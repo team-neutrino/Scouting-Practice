@@ -1,89 +1,23 @@
+body {
+    background-color: rgb(156, 199, 255);
+}
+
 table {
     border: solid 2px black;
+    background-color: white;
+    text-align: center;
     width: 98vw;
-    height: 10vw;
-}
-
-th {
-    border: solid 2px black;
-    height: 20vh;
-    font-size: xx-large;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: blue;
-}
-
-tr {
-    border: solid 2px black;
-    height: 20vh;
+    height: 98vh;
 }
 
 td {
     border: solid 2px black;
+    background-color: white;
     text-align: center;
 }
 
-textarea {
-    resize: none;
-}
-
-#button1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
-    background-color: green;
-    border-color: green;
-}
-
-#button3 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
-    background-color: orange;
-    border-color: orange;
-}
-
-#button2 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
-    background-color: rgb(151, 255, 151);
-    border-color: rgb(151, 255, 151);
-}
-
-#button4 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
-    background-color: rgb(255, 206, 116);
-    border-color: rgb(255, 206, 116);
-}
-
-#backbutton {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
-    background-color: white;
-    border-color: white;
-}
-
-#nextbutton {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
-    background-color: white;
-    border-color: white;
-}
-
-#button1td {
-    background-color: green;
-}
-
-#textareatd {
-    background-color: gray;
-}
-
-#button3td {
-    background-color: orange;
-}
-
-#button2td {
-    background-color: rgb(151, 255, 151);
-}
-
-#button4td {
-    background-color: rgb(255, 206, 116);
+th {
+    text-align: center;
+    font-size: xx-large;
+    text-align: center;
 }
