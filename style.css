@@ -1,23 +1,20 @@
 body {
-    background-color: rgb(156, 199, 255);
+    background-color: rgb(76, 94, 117);
 }
 
-table {
+button {
+    width: 100px;
+    height: 100px;
     border: solid 2px black;
-    background-color: white;
-    text-align: center;
-    width: 98vw;
-    height: 98vh;
+    border-radius: 100%;
+    background-color: rgb(121, 89, 58);
 }
 
-td {
-    border: solid 2px black;
-    background-color: white;
-    text-align: center;
+button:hover {
+    background-color: rgb(121, 89, 58);
+    color: black;
 }
 
-th {
-    text-align: center;
-    font-size: xx-large;
-    text-align: center;
+p {
+    color: white;
 }
