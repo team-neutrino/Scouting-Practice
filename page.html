@@ -5,11 +5,15 @@
     <meta charset="utf-8">
     <title>page</title>
     <link rel="styleSheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
-<body>
-    <button id="button1"onclick="myFunction('taco bell')">button 1</button>
-    <script src="script.js"></script>
+<body id="body">
+    <button id="button1"onclick="add1()">Add 1</button>
+    <p id="text1">0</p>
+    <input type="text" id="password" onchange="checkPassword()">
+    <textarea id="textarea1" onchange="vowelDeleter()"></textarea>
+    <button onclick="createButton()">Create Button</button>
 </body>
 
 </html>
