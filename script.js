@@ -1,13 +1,20 @@
 var buttonValue = 1;
 var insufficientMoney = "Not enough money";
+var basicUpgradeCheck = false;
 
-function something() {
-    let button = document.getElementById("aButton");
-    if (buttonValue < 10) {
+function basicUpgradeScan() {
+    if (basicUpgradeCheck) {
+        document.getElementById("mainButton") = buttonValue + 1;
+    }
+}
+
+function increment() {
+    let button = document.getElementById("mainButton");
+    if (buttonValue < 50) {
         buttonValue = buttonValue + 1;
         button.textContent = buttonValue;
     }
-    else if (buttonValue < 100) {
+    else if (buttonValue < 200) {
         buttonValue = buttonValue +2;
         button.textContent = buttonValue;
     }
@@ -22,17 +29,19 @@ function something() {
 }
 
 function basicUpgrade() {
-    let button = document.getElementById("anotherButton");
+    let button = document.getElementById("basicUpgradeButton");
     if (buttonValue < 50) {
         button.textContent = insufficientMoney;
         button.disabled = true;
         setTimeout(() => {
-        button.textContent = "Button1";
+        button.textContent = "Basic Upgrade";
         button.disabled = false;
         }
     ,1000);
     }
     else {
         buttonValue = buttonValue -50;
+        mainButton.textContent = buttonValue;
+        basicUpgradeCheck = true;
     }
 }
