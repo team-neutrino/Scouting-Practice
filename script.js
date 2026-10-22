@@ -1,36 +1,18 @@
-var buttonValue = 1;
+var buttonValue = 45;
 var insufficientMoney = "Not enough money";
-var basicUpgradeCheck = false;
-
-function basicUpgradeScan() {
-    if (basicUpgradeCheck) {
-        document.getElementById("mainButton") = buttonValue + 1;
-    }
-}
+var clicksPerClick = 1;
+var basicUpgradeMultiplier = 1.2;
+var basicUpgradeCost = 50;
 
 function increment() {
     let button = document.getElementById("mainButton");
-    if (buttonValue < 50) {
-        buttonValue = buttonValue + 1;
-        button.textContent = buttonValue;
-    }
-    else if (buttonValue < 200) {
-        buttonValue = buttonValue +2;
-        button.textContent = buttonValue;
-    }
-    else if (buttonValue < 500) {
-        buttonValue = buttonValue +4;
-        button.textContent = buttonValue;
-    }
-    else {
-        buttonValue = buttonValue +5;
-        button.textContent = buttonValue;
-    }
+    buttonValue = buttonValue + 1 + (clicksPerClick - 1);
+    button.textContent = buttonValue;
 }
 
 function basicUpgrade() {
     let button = document.getElementById("basicUpgradeButton");
-    if (buttonValue < 50) {
+    if (buttonValue < basicUpgradeCost) {
         button.textContent = insufficientMoney;
         button.disabled = true;
         setTimeout(() => {
@@ -40,8 +22,9 @@ function basicUpgrade() {
     ,1000);
     }
     else {
-        buttonValue = buttonValue -50;
+        buttonValue = buttonValue - basicUpgradeCost;
         mainButton.textContent = buttonValue;
-        basicUpgradeCheck = true;
+        clicksPerClick = clicksPerClick + 1;
+        basicUpgradeCost = basicUpgradeCost * basicUpgradeMultiplier;
     }
 }
