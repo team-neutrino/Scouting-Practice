@@ -31,5 +31,6 @@ button:hover {
 }
 
 #basicUpgradeCost {
-    font-size:
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
 }

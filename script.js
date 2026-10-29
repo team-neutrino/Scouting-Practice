@@ -12,6 +12,7 @@ function increment() {
 
 function basicUpgrade() {
     let button = document.getElementById("basicUpgradeButton");
+    let text = document.getElementById("basicUpgradeCost");
     if (buttonValue < basicUpgradeCost) {
         button.textContent = insufficientMoney;
         button.disabled = true;
@@ -25,6 +26,7 @@ function basicUpgrade() {
         buttonValue = buttonValue - basicUpgradeCost;
         mainButton.textContent = buttonValue;
         clicksPerClick = clicksPerClick + 1;
-        basicUpgradeCost = basicUpgradeCost * basicUpgradeMultiplier;
+        basicUpgradeCost = Math.floor(basicUpgradeCost * basicUpgradeMultiplier);
+        text.textContent = Math.floor(basicUpgradeCost);
     }
 }
