@@ -1,5 +1,6 @@
 body {
-    background-color: rgb(76, 94, 117);
+    background-image: url('https://media.istockphoto.com/id/173827116/photo/chocolate-chip-cookies-stack-frame-border-of-fresh-baked-dessert.jpg?s=612x612&w=0&k=20&c=ivw026DB0aX6DkcGpxs_lbLPJIZVeDAgtsZ10Sf9LW4=');
+    background-size: cover;
 }
 
 button {
@@ -11,10 +12,33 @@ button {
 }
 
 button:hover {
-    background-color: rgb(121, 89, 58);
+    background-color: rgb(85, 57, 30);
     color: black;
 }
 
+button:active {
+    background-color: rgb(49, 31, 14)
+}
+
 p {
-    color: white;
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+tr {
+    text-align: center;
+    vertical-align: middle;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border-color: solid 2px black;
+}
+
+th {
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

@@ -15,11 +15,25 @@ function ifClicked() {
 
 }
 
-function otherButton() {
-    perClick = perClick + 1;
+function double() {
+    let carrot = document.getElementById("text");
+    click1 = click1 * 2;
+    carrot.textContent = click1;
 }
 
-function booton() {
+function triple() {
+    let carrot = document.getElementById("text");
+    click1 = click1 * 3;
+    carrot.textContent = click1;
+}
+
+function quadruple() {
+    let carrot = document.getElementById("text");
+    click1 = click1 * 4;
+    carrot.textContent = click1;
+}
+
+function centuple() {
     let lettuce = document.getElementById("text");
     click1 = click1 * 100;
     lettuce.textContent = click1;
