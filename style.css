@@ -1,12 +1,14 @@
 button {
-    width: 10vw;
-    height: 10vh;
-    background-color: rgb(22, 222, 42);
+    width: 100;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-image: url(istockphoto-517109442-612x612.jpg);
+    background-position: center;
 }
 
 table {
-    width: 50vw;
-    height: 50vh;
+    width: 100vw;
+    height: 100vh;
     border: 1px solid black;
 
 }
@@ -15,7 +17,23 @@ div {
     position: absolute;
     translate: -50% -50%;
     left: 50vw;
-    top: 50vh;
+    top: 52vh;
+}
+
+#title {
+    position: absolute;
+    translate: -50% -50%;
+    left: 50vw;
+    top: 2vh;
+    font-size: 100px;
+}
+
+#number {
+    position: absolute;
+    translate: -50% -50%;
+    left: 50vw;
+    top: 85vh;
+    font-size: 50px;
 }
 
 tr,
@@ -23,11 +41,7 @@ td {
     border: 1px solid black;
 }
 
-#B1 {
-    left: 50vw;
-    top: 50vw;
-}
-
-#B2 {
-    position: absolute;
+#cookie {
+    width: 30vw;
+    height: 30vw;
 }
