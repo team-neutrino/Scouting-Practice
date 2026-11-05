@@ -1,22 +1,13 @@
-<<<<<<< Updated upstream
-button {
-    width: 75vh;
-    height: 30vh;
-    background-color:rgb(157, 255, 72)
-}
-table {
-        height: 98vh;
-        width: 98vh;
-        border: 1px solid black;
-}
-
-tr, td {
-    border: 1px solid black;
-=======
 table {
     border: 5px solid black;
-    text-align: center; 
-    height: 50vh;
-    width: 50vw;
->>>>>>> Stashed changes
+    text-align: center;
+    height: 75vh;
+    width: 75vw;
+    background-color: aquamarine;
+}
+
+button {
+    height: 10vh;
+    width: 10vw;
+    font-size: 20px;
 }
