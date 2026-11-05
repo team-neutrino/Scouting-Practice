@@ -17,12 +17,41 @@ function myFunction(value){
 }
 
 
+var array1 = ["Hello","Good Day","Merry Christmas","Happy New Year"];
 
+console.log(array1[1]);
+console.log(array1[0]);
+array1[1] = "This";
+console.log(array1[1]);
 
+console.log(array1.length);
 
+array1.push("Good Day You")
+console.log(array1)
+console.log(array1.length);
 
+array1.pop();
+console.log(array1)
+console.log(array1.length);
 
+function findPrimeNumbers(upperBound){
+    let primeNumbers = [];
+    for(let num = 1; num < upperBound; num++){
+        let prime = true;
+        for(let lowerNum = 2; lowerNum < num; lowerNum++){
+            if(num % lowerNum === 0){
+                prime = false;
+                break;
+            }
+        }
+        if(prime){
+            primeNumbers.push(num)
+        }
+    }
+    return primeNumbers
+}
 
+console.log(findPrimeNumbers(50));
 
 
 
