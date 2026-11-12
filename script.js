@@ -7,8 +7,10 @@ var costDisplay = "Cost: "
 var clicksPerSecond = 0;
 var clicksPerSecondCost = 60;
 const greaterClicksPerSecond = setInterval(() => {
-  buttonValue + clicksPerSecond;
-}, 1000);
+    let button = document.getElementById("mainButton");
+    buttonValue += 0.1* clicksPerSecond;
+    button.textContent = buttonValue;
+}, 100);
 
 function increment() {
     let button = document.getElementById("mainButton");
@@ -53,7 +55,7 @@ function basicUpgrade() {
         buttonValue = buttonValue - clicksPerSecondCost;
         mainButton.textContent = buttonValue;
         clicksPerSecond = clicksPerSecond + 1;
-        clicksPerSecondCost = Math.floor(clicksPerSecondCost * basicUpradeMultiplier);
+        clicksPerSecondCost = Math.floor(clicksPerSecondCost * basicUpgradeMultiplier);
         text.textContent = costDisplay + Math.floor(clicksPerSecondCost);
     }
     
