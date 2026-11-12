@@ -1,9 +1,16 @@
-button {
+#cookie {
     width: 100;
     aspect-ratio: 1;
     border-radius: 100%;
     background-image: url(istockphoto-517109442-612x612.jpg);
     background-position: center;
+}
+
+#upgrade {
+    right: -40vw;
+    top: 20vh;
+    width: 200px;
+    height: 200px;
 }
 
 table {
@@ -26,6 +33,23 @@ div {
     left: 50vw;
     top: 2vh;
     font-size: 100px;
+}
+
+#usebutton {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 5px;
+    right: -40vw;
+    top: 20vh;
+    width: 200px;
+    height: 200px;
+}
+
+
+#galletas {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
 }
 
 #number {
