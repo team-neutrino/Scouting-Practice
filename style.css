@@ -2,7 +2,7 @@ table,
 th,
 td,
 tr {
-    border: 1px solid black;
+    border: 3px solid tan;
 }
 
 table {
@@ -12,8 +12,23 @@ table {
 
 th {
     background-color: brown;
+
 }
 
 td {
     text-align: center;
+    width: 50vw;
+}
+
+#fat {
+    height: 30vh;
+    width: 18vw;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+}
+
+#big {
+    height: 140%;
+    width: 150%;
 }
