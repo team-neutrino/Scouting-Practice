@@ -1,14 +1,10 @@
-<<<<<<< HEAD
+
 #cookie {
-=======
-button {
->>>>>>> origin/Prisha
     width: 100;
     aspect-ratio: 1;
     border-radius: 100%;
     background-image: url(istockphoto-517109442-612x612.jpg);
     background-position: center;
-<<<<<<< HEAD
 }
 
 #upgrade {
@@ -16,8 +12,6 @@ button {
     top: 20vh;
     width: 200px;
     height: 200px;
-=======
->>>>>>> origin/Prisha
 }
 
 table {
@@ -42,7 +36,6 @@ div {
     font-size: 100px;
 }
 
-<<<<<<< HEAD
 #usebutton {
     display: grid;
     grid-template-rows: auto auto;
@@ -60,8 +53,6 @@ div {
     grid-gap: 5px;
 }
 
-=======
->>>>>>> origin/Prisha
 #number {
     position: absolute;
     translate: -50% -50%;

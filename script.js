@@ -1,5 +1,4 @@
 var cooknumb = 0;
-<<<<<<< HEAD
 var x = 1;
 function addCookie() {
     cooknumb = cooknumb + x;
@@ -15,10 +14,4 @@ function subCookie() {
     cooknumb = cooknumb - x;
     document.getElementById("number").textContent = cooknumb;
 }
-=======
-function addCookie() {
-    cooknumb++;
-    document.getElementById("number").textContent = cooknumb;
 
-}
->>>>>>> origin/Prisha
