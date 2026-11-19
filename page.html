@@ -6,9 +6,48 @@
     <title>page</title>
     <script src="script.js"></script>
     <link rel="styleSheet" type="text/css" href="style.css">
+    <style>
+        body {
+            height: 200vh;
+            /* Added height so you can test scrolling */
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        #wizard {
+            position: fixed;
+            top: 0;
+            left: 0;
+            font-size: 48px;
+            pointer-events: none;
+            /* Crucial: lets clicks pass through to elements below */
+            z-index: 9999;
+            /* Keeps the wizard on top of other content */
+            user-select: none;
+            /* Smooth trailing effect */
+            transition: transform 0.12s ease-out;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="wizard">🧙‍♂️</div>
+
+    <script>
+        const wizard = document.getElementById('wizard');
+
+        window.addEventListener('pointermove', (event) => {
+            // Offset slightly so the wizard floats beside the cursor instead of right under it
+            const offsetX = 15;
+            const offsetY = 15;
+
+            const x = event.clientX + offsetX;
+            const y = event.clientY + offsetY;
+
+            // Using translate3d leverages GPU acceleration for smoother movement
+            wizard.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        });
+    </script>
     <table>
         <tr>
             <th id="myHeading">COOKIE CLICKER!</th>
