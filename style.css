@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;
+}
+
+body {
+    background-color: burlywood;
+}
+
+.btn {
+    border: 5px;
+    border-color: black;
+    border-radius: 10px;
+}
+
+#btn1::after {
+    content: url(RAH.png);
+    max-width: 20px;
+    max-height: 20px;
+}
+
+#s1 {
+    text-align: center;
+}
+
+#numcookies {
+    text-align: center;
+
+}
+
+#btn1:active {
+    content: url(images.jpg);
+    max-width: 160px;
+    max-height: 160px;
+}
+
+#ss {
+    background-color: darkblue;
+    height: 100vh;
+    width: 80px;
+    margin: 0px;
+}
