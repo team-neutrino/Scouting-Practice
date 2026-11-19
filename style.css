@@ -42,6 +42,12 @@ button:hover {
     padding: 10px;
 }
 
+#betterUpgradeCost {
+    font-size: 18px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
 text {
     text-align: center;
 }
