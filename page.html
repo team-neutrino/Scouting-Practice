@@ -8,44 +8,76 @@
     <link rel="styleSheet" type="text/css" href="style.css">
     <style>
         body {
-            height: 200vh;
-            /* Added height so you can test scrolling */
             margin: 0;
-            font-family: sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            /* Prevents scrollbars if a wizard spawns near the edge */
+            user-select: none;
+            /* Prevents highlighting emojis when clicking fast */
+            cursor: pointer;
         }
 
+        .wizard {
+            position: fixed;
+            font-size: 20px;
+            pointer-events: none;
+            /* Lets you click "through" existing wizards */
+            animation: popIn 0.3s ease-out;
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+    <style>
         #wizard {
             position: fixed;
             top: 0;
             left: 0;
-            font-size: 48px;
+            font-size: 2.5rem;
             pointer-events: none;
-            /* Crucial: lets clicks pass through to elements below */
-            z-index: 9999;
-            /* Keeps the wizard on top of other content */
+            /* Prevents the wizard from blocking clicks */
             user-select: none;
-            /* Smooth trailing effect */
-            transition: transform 0.12s ease-out;
+            z-index: 9999;
+            will-change: transform;
+        }
+
+        /* Respect accessibility preferences for reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            #wizard {
+                display: none;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div id="wizard">🧙‍♂️</div>
-
     <script>
-        const wizard = document.getElementById('wizard');
+        document.addEventListener('click', () => {
+            // 1. Create the wizard element
+            const wizard = document.createElement('div');
+            wizard.textContent = '🧙‍♂️';
+            wizard.classList.add('wizard');
 
-        window.addEventListener('pointermove', (event) => {
-            // Offset slightly so the wizard floats beside the cursor instead of right under it
-            const offsetX = 15;
-            const offsetY = 15;
+            // 2. Calculate a random X and Y position within the visible window
+            // Subtracting 50 keeps the wizard from getting cut off on the right/bottom edges
+            const randomX = Math.floor(Math.random() * (window.innerWidth - 50));
+            const randomY = Math.floor(Math.random() * (window.innerHeight - 50));
 
-            const x = event.clientX + offsetX;
-            const y = event.clientY + offsetY;
+            // 3. Apply the coordinates
+            wizard.style.left = `${randomX}px`;
+            wizard.style.top = `${randomY}px`;
 
-            // Using translate3d leverages GPU acceleration for smoother movement
-            wizard.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+            // 4. Add the wizard to the page
+            document.body.appendChild(wizard);
         });
     </script>
     <table>
@@ -69,7 +101,53 @@
             </td>
         </tr>
         <div>🧙‍♂️</div>
+        <script>
+            const headers = document.querySelectorAll('th');
+            const colors = ['crimson', 'Purple', 'SeaGreen', 'fuchsia', 'Pink', 'PapayaWhip', 'royalblue'];
+            let index = 0;
 
+            setInterval(() => {
+                headers.forEach(th => {
+                    th.style.color = colors[index];
+                });
+                index = (index + 1) % colors.length;
+            }, 1000);
+        </script>
+        <div id="wizard" aria-hidden="true">🧙‍♂️</div>
+
+        <script>
+            const wizard = document.getElementById('wizard');
+
+            // Track target (mouse) and current (wizard) coordinates
+            let mouseX = window.innerWidth / 2;
+            let mouseY = window.innerHeight / 2;
+            let wizardX = mouseX;
+            let wizardY = mouseY;
+
+            // Update target coordinates when the pointer moves across the window
+            window.addEventListener('pointermove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateWizard() {
+                // Smooth trailing delay (0.1 = slow float, 1 = instant snap)
+                const speed = 0.12;
+                wizardX += (mouseX - wizardX) * speed;
+                wizardY += (mouseY - wizardY) * speed;
+
+                // Flip the wizard horizontally depending on movement direction
+                const facingDirection = mouseX < wizardX ? -1 : 1;
+
+                // Offset slightly (+20px) so the wizard floats beside the cursor instead of under it
+                wizard.style.transform = `translate(${wizardX + 20}px, ${wizardY - 20}px) scaleX(${facingDirection})`;
+
+                requestAnimationFrame(animateWizard);
+            }
+
+            // Start the animation loop
+            animateWizard();
+        </script>
     </table>
 </body>
 

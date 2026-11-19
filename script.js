@@ -38,3 +38,4 @@ function centuple() {
     click1 = click1 * 100;
     lettuce.textContent = click1;
 }
+
